@@ -1,1 +1,80 @@
 
+[
+  {
+    "id": 1,
+    "formName": "Dynamic Form",
+    "fields": [
+      {
+        "id": 1,
+        "fieldType": "TextInput",
+        "question": "First Name?"
+      },
+      {
+        "id": 2,
+        "fieldType": "SelectList",
+        "question": "Gender ?",
+        "options": [
+          {"optionLabel": "Male", "optionValue": "male"},
+          {"optionLabel": "Female", "optionValue": "female"}
+        ],
+        "conditional": {
+          "male": [
+            {
+              "id": 3,
+              "fieldType": "TextInput",
+              "question": "Additional Information for Male"
+            }
+          ],
+          "female": [
+            {
+              "id": 4,
+              "fieldType": "DatetimePicker",
+              "question": "Date of Birth"
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "fieldType": "DatetimePicker",
+        "question": "Date of birth"
+      },
+      {
+        "id": 4,
+        "fieldType": "CheckboxInput",
+        "question": "Select your hobbies",
+        "options": [
+          {"optionLabel": "Reading", "optionValue": "reading"},
+          {"optionLabel": "Travelling", "optionValue": "travelling"},
+          {"optionLabel": "Gaming", "optionValue": "gaming"}
+        ]
+      },
+      {
+        "id": 5,
+        "fieldType": "RadioInput",
+        "question": "Select your age group",
+        "options": [
+          {"optionLabel": "Under 18", "optionValue": "under_18"},
+          {"optionLabel": "18-30", "optionValue": "18_30"},
+          {"optionLabel": "30-50", "optionValue": "30_50"}
+        ],
+        "conditional": {
+          "under_18": [
+            {
+              "id": 6,
+              "fieldType": "TextInput",
+              "question": "Guardian's Name"
+            }
+          ],
+          "18_30": [
+            {
+              "id": 7,
+              "fieldType": "TextInput",
+              "question": "College Name"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]
